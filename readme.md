@@ -4,6 +4,8 @@
 ```bash
 docker compose up --build
 docker compose exec api alembic upgrade head
+http://localhost:5173
+http://localhost:8000/docs
 ```
 
 ## Demo
