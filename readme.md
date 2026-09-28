@@ -8,11 +8,6 @@ http://localhost:5173
 http://localhost:8000/docs
 ```
 
-## Demo
-```bash
-# See section 12 above
-```
-
 ## Architecture
 - **API**: Normalizes domain, creates job, publishes Celery task, returns 202.
 - **Worker**: Fetches from provider, normalizes hostnames, computes changes, stores snapshot.
