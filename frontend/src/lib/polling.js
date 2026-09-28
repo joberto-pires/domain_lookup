@@ -4,11 +4,15 @@ export function pollJob(id, onData, onDone, intervalMs = 2000) {
 
   async function poll() {
     if (cancelled) return;
-    const data = await getJob(id);
-    onData(data);
-    if (data.status === "succeeded" || data.status === "failed") {
-      onDone(data);
-      return;
+    try {
+      const data = await getJob(id);
+      onData(data);
+      if (data.status === "succeeded" || data.status === "failed") {
+        onDone(data);
+        return;
+      }
+    } catch (err) {
+      console.error("poll error", err);
     }
     timeoutId = setTimeout(poll, intervalMs);
   }

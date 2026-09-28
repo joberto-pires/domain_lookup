@@ -1,0 +1,7 @@
+[
+  {"type": "success", "hostnames": ["api.example.com", "mail.example.com"]},
+  {"type": "success", "hostnames": ["mail.example.com", "vpn.example.com"]},
+  {"type": "error", "message": "Lookup failed", "retryable": true},
+  {"type": "success", "hostnames": ["api.example.com", "mail.example.com"]},
+  {"type": "success", "hostnames": []}
+]

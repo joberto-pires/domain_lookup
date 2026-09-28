@@ -7,6 +7,7 @@ from app.models import Job, HostnameReview
 from app.schemas import JobCreate, JobResponse, JobListItem, ReviewUpdate
 from app.normalization import normalize_domain
 from app.worker import lookup_domain
+from app.config import settings
 
 router = APIRouter()
 
